@@ -6,6 +6,7 @@
   --main-backgroud-color: #ffffff;
   --second-backgroud-color: #2f303a;
   --third-backgroud-color: #f5f4fa;
+  --set-gap: 15px
 }
 
 body {
@@ -15,6 +16,11 @@ body {
   color: var(--main-text-color);
   font-size: 14px;
   line-height: 1.14;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .link {
@@ -48,17 +54,32 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  outline: 2px solid aquamarine;
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  outline: 2px solid aquamarine;
+
+  outline: 2px solid aqua;
+}
+
+.title, .subtitle {
+  margin: 0;
 }
 /* Шапка  */
 
 .header {
   border-bottom: 1px solid #ECECEC;
+  /* height: 80px; */
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -68,6 +89,8 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  margin-right: 93px;
 }
 
 .header-logo-text {
@@ -78,10 +101,27 @@ body {
 .header-cl {
   font-weight: 500;
   letter-spacing: 0.02em;
+  display: flex;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-nav-link {
+  padding-top: 32px;
+  padding-bottom: 31px;
+  display: block;
   color: var(--main-text-color);
+}
+
+
+.header-cl {
+  margin-left: auto;
+}
+
+.header-cl-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-cl-link {
@@ -92,37 +132,6 @@ body {
 .header-nav-link:focus,
 .header-cl-link:hover,
 .header-cl-link:focus {
-  color: var(--accent-text-color);
-}
-
-/* Футер */
-
-.footer {
-  background-color: var(--second-backgroud-color);
-}
-
-.footer-logo-text {
-  color: var(--third-text-color);
-}
-
-.footer-cl {
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-.footer-adress-link {
-  color: var(--third-text-color);
-}
-
-.footer-cl-link {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-adress-link:hover,
-.footer-adress-link:focus,
-.footer-cl-link:hover,
-.footer-cl-link:focus {
   color: var(--accent-text-color);
 }
 
@@ -148,9 +157,9 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-text-color);
-  margin: 0 auto;
+
+  margin: 0 auto 30px;
   width: 696px;
-  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -164,8 +173,10 @@ body {
   color: var(--third-text-color);
   background-color: var(--accent-text-color);
   cursor: pointer;
+
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-width: 0; 
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
@@ -178,11 +189,23 @@ body {
 
 /* Особенности */
 
+.features-list {
+  display: flex;
+  margin: calc(-1* var(--set-gap));
+}
+
+.features-item {
+  margin: var(--set-gap);
+  width: 270px;
+}
+
 .features-item-title {
   font-weight: bold;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-text-color);
+
+  margin-bottom: 10px;
 }
 
 .features-item-subtitle {
@@ -192,6 +215,23 @@ body {
 }
 
 /* Чем мы занимаемся */
+
+.what-doing {
+  padding-top: 0;
+}
+
+.what-doing-title {
+  margin: 50px;
+}
+
+.what-doing-list {
+  display: flex;
+  margin: calc(-1* var(--set-gap));
+}
+
+.what-doing-item {
+  margin: var(--set-gap);
+}
 
 .what-doing-title,
 .our-team-title {
@@ -209,18 +249,39 @@ body {
   background-color: var(--third-backgroud-color);
 }
 
+.our-team-title {
+  margin-bottom: 50px;
+}
+
+.our-team-list {
+  display: flex;
+  margin: calc(-1* var(--set-gap))  ;
+}
+
 .our-team-item {
   background-color: var(--third-text-color);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin: var(--set-gap);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-info {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .our-team-item-title {
   font-size: 16px;
   font-weight: 500;
   color: var(--main-text-color);
+  margin-bottom: 10px;
 }
 
 .our-team-item-subtitle {
@@ -258,4 +319,35 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+}
+
+/* Футер */
+
+.footer {
+  background-color: var(--second-backgroud-color);
+}
+
+.footer-logo-text {
+  color: var(--third-text-color);
+}
+
+.footer-cl {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-adress-link {
+  color: var(--third-text-color);
+}
+
+.footer-cl-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-adress-link:hover,
+.footer-adress-link:focus,
+.footer-cl-link:hover,
+.footer-cl-link:focus {
+  color: var(--accent-text-color);
 }

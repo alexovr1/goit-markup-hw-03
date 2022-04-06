@@ -327,8 +327,20 @@ img {
   background-color: var(--second-backgroud-color);
 }
 
+.footer-wraper {
+  padding: 60px 0;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
 .footer-logo-text {
   color: var(--third-text-color);
+}
+
+.footer-nav-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-cl {

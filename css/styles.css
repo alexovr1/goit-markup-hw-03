@@ -62,14 +62,14 @@ h1, h2, h3, h4, h5, p, ul {
   padding-right: 15px;
   padding-left: 15px;
 
-  outline: 2px solid aquamarine;
+  /* outline: 2px solid aquamarine; */
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  outline: 2px solid aqua;
+  /* outline: 2px solid aqua; */
 }
 
 /* .title, .subtitle {
@@ -185,6 +185,8 @@ h1, h2, h3, h4, h5, p, ul {
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
+  height: 50px;
+  min-width: 200px;
 }
 
 .hero-btn:hover,
@@ -335,17 +337,19 @@ h1, h2, h3, h4, h5, p, ul {
 .examples-list {
   display: flex;
   flex-wrap: wrap;
-  /* margin: -30px; */
-  margin-right: calc(-1* var(--set-gap));
-  margin-bottom: calc(-1* var(--set-gap));
-  justify-
+  margin: calc(-1 * var(--set-gap));
+  /* margin-right: calc(-1 * var(--set-gap)); */
+  /* margin-bottom: calc(-1 * var(--set-gap)); */
 }
 
 .examples-item {
-  /* margin: 30px; */
-  flex-basis: calc((100% / 3 - var(--set-gap)));
-  margin-right: calc(1* var(--set-gap));
-  margin-bottom: calc(1* var(--set-gap));
+  margin: var(--set-gap);
+  flex-basis: calc(100% / 3 - (2 * var(--set-gap)));
+}
+
+.examples-item-description {
+  padding: 20px 24px;
+  border-bottom: 1px solid #EEEEEE;
 }
 
 .examples-item-title {
@@ -354,6 +358,8 @@ h1, h2, h3, h4, h5, p, ul {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
+
+  margin-bottom: 4px;
 }
 
 .examples-item-subtitle {
